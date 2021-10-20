@@ -1,0 +1,5 @@
+# shellcheck shell=bash
+
+{{ if (and (eq .chezmoi.os "darwin") (eq .chezmoi.homeDir "/Users/mkeller"))  }}
+source "/Users/mkeller/Projects/utils/betterview-dotfiles/.bashrc"
+{{ end }}

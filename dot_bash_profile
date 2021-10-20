@@ -1,3 +1,0 @@
-# shellcheck disable=2148
-
-source /Users/mkeller/Projects/utils/betterview-dotfiles/.bashrc

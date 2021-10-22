@@ -5,7 +5,7 @@ if [[ -x "(command -v bat)" ]]; then
   export BAT_THEME="DarkNeon"
 
   batdiff() {
-    git diff --name-only --diff-filter=d | xargs "$HOME/.cargo/bin/bat" --diff
+    git diff --name-only --diff-filter=d | xargs "$(which bat)" --diff
   }
 
   alias bat='bat'

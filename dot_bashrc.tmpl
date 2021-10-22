@@ -32,6 +32,7 @@ for dot in $(find $DOTFILE_DIR -maxdepth 1 -type f -name '*.dotfile'); do
 done
 
 {{ template "apps/bat.sh" }}
+{{ template "apps/brew.sh" }}
 
 if ! [[ -x "$(command -v starship)" ]]; then
   source backup.prompt

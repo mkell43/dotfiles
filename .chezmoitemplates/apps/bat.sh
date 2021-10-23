@@ -1,14 +1,10 @@
-# shellcheck shell=bash
+#=== Bat
+#=== https://github.com/sharkdp/bat
+export BAT_THEME="DarkNeon"
 
-if [[ -x "(command -v bat)" ]]; then
+batdiff() {
+  git diff --name-only --diff-filter=d | xargs "$(which bat)" --diff
+}
 
-  export BAT_THEME="DarkNeon"
-
-  batdiff() {
-    git diff --name-only --diff-filter=d | xargs "$(which bat)" --diff
-  }
-
-  alias bat='bat'
-  alias cat='bat --paging=never -pp'
-
-fi
+alias bat='bat'
+alias cat='bat --paging=never -pp'

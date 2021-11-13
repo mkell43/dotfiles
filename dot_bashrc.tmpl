@@ -25,6 +25,7 @@
 {{ template "linux/aliases.sh" }}
 {{ template "common/less.sh" }}
 
+if [ -e /home/mike/.nix-profile/etc/profile.d/nix.sh ]; then . /home/mike/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
 {{ template "apps/brew.sh" }}
 {{ template "apps/rust.sh" }}
 {{ template "apps/go.sh" }}
@@ -38,11 +39,12 @@
 {{ template "apps/git.sh" }}
 {{ template "apps/github.sh" }}
 {{ template "apps/k8s.sh" }}
-{{ template "apps/vscode.sh" }}
 {{ template "apps/yq.sh" }}
 {{ template "apps/starship.sh" }}
 
 {{ template "common/kellerhome.sh" }}
+
+source <(curl -sSL git.io/forgit)
 
 if [[ -x "$(command -v figlet)" ]]; then
   figlet -f big "DOTFILES LOADED"

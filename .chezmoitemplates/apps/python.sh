@@ -4,9 +4,10 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 eval "$(pyenv init --path)"
 
-export PATH="$HOME/.poetry/bin:$PATH"
-# shellcheck source=/home/mike/.poetry/env
-source "$HOME/.poetry/env"
+# export PATH="$HOME/.poetry/bin:$PATH"
+# # shellcheck source=/home/mike/.poetry/env
+# source "$HOME/.poetry/env"
+eval "$(poetry completions bash)"
 
 export PATH="$PATH:/home/mike/.local/bin"
 eval "$(register-python-argcomplete3 pipx)"

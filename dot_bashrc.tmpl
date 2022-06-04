@@ -51,6 +51,9 @@ if [[ -x "$(command -v figlet)" ]]; then
   figlet -f big "DOTFILES LOADED"
 fi
 
+# ~/.rd/bin
+PATH="$HOME/.rd/bin:$PATH"
+
 # Go straight into Tmux.
 # https://unix.stackexchange.com/a/113768
 # if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then

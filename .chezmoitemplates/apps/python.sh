@@ -10,7 +10,7 @@ eval "$(pyenv init --path)"
 eval "$(poetry completions bash)"
 
 export PATH="$PATH:/home/mike/.local/bin"
-eval "$(register-python-argcomplete3 pipx)"
+eval "$(register-python-argcomplete pipx)"
 
 proj() {
   # Assumes that you're using `pyenv`.
